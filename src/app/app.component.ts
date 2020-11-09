@@ -12,14 +12,27 @@ import { INITIAL_EVENTS, createEventId } from "./event-utils";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"]
 })
+
+export class JamSession {
+
+  constructor(
+    public title: string,
+    public organiser: string,
+    public type: string
+  ) {  }
+}
+
+
 export class AppComponent {
   calendarVisible = true;
   calendarOptions: CalendarOptions = {
     headerToolbar: {
-      left: "prev,next today",
+      left: "prev today next",
       center: "title",
       right: "timeGridWeek,timeGridDay,listWeek"
     },
+    timeZone: "UTC",
+    locale: "be",
     initialView: "timeGridWeek",
     initialEvents: INITIAL_EVENTS, // alternatively, use the `events` setting to fetch from a feed
     weekends: true,
