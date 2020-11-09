@@ -18,9 +18,9 @@ export class AppComponent {
     headerToolbar: {
       left: "prev,next today",
       center: "title",
-      right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek"
+      right: "timeGridWeek,timeGridDay,listWeek"
     },
-    initialView: "dayGridMonth",
+    initialView: "timeGridWeek",
     initialEvents: INITIAL_EVENTS, // alternatively, use the `events` setting to fetch from a feed
     weekends: true,
     editable: true,
